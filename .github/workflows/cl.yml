@@ -21,11 +21,8 @@ jobs:
                   npm install
                   npm run build
                   npm run start:prod
-                  pm2 log
                   npm run restart
-                  pm2 flush
                   npm run stop
-                  pm2 log
 
             - uses: actions/setup-node@v1
               with:
@@ -37,11 +34,8 @@ jobs:
                   npm install
                   npm run build
                   npm run start:prod
-                  pm2 log
                   npm run restart
-                  pm2 flush
                   npm run stop
-                  pm2 log
             - uses: actions/setup-node@v1
               with:
                   node-version: "13.x"
@@ -52,8 +46,5 @@ jobs:
                   npm install
                   npm run build
                   npm run start:prod
-                  pm2 log
                   npm run restart
-                  pm2 flush
                   npm run stop
-                  pm2 flush
