@@ -20,11 +20,11 @@ jobs:
                   npm install
                   npm run build
                   npm run start:prod
-                  curl http://localhost:3000
+                  pm2 log
                   npm run restart
-                  curl http://localhost:3000
+                  pm2 flush
                   npm run stop
-                  curl http://localhost:3000
+                  pm2 log
             - uses: actions/setup-node@v1
               with:
                   node-version: "12.x"
@@ -34,11 +34,11 @@ jobs:
                   npm install
                   npm run build
                   npm run start:prod
-                  curl http://localhost:3000
+                  pm2 log
                   npm run restart
-                  curl http://localhost:3000
+                  pm2 flush
                   npm run stop
-                  curl http://localhost:3000
+                  pm2 log
             - uses: actions/setup-node@v1
               with:
                   node-version: "13.x"
@@ -48,8 +48,8 @@ jobs:
                   npm install
                   npm run build
                   npm run start:prod
-                  curl http://localhost:3000
+                  pm2 log
                   npm run restart
-                  curl http://localhost:3000
+                  pm2 flush
                   npm run stop
-                  curl http://localhost:3000
+                  pm2 flush
