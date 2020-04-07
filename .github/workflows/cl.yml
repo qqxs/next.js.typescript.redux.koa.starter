@@ -14,6 +14,7 @@ jobs:
             - uses: actions/setup-node@v1
               with:
                   node-version: "10.x"
+            - run: node -v
             - run: npm install pm2 -g
             - name: Install and Build run pm2  node@10.x
               run: |
@@ -25,9 +26,11 @@ jobs:
                   pm2 flush
                   npm run stop
                   pm2 log
+
             - uses: actions/setup-node@v1
               with:
                   node-version: "12.x"
+            - run: node -v
             - run: npm install pm2 -g
             - name: Install and Build run pm2  node@12.x
               run: |
@@ -42,6 +45,7 @@ jobs:
             - uses: actions/setup-node@v1
               with:
                   node-version: "13.x"
+            - run: node -v
             - run: npm install pm2 -g
             - name: Install and Build run pm2  node@13.x
               run: |
