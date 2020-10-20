@@ -1,0 +1,10 @@
+@import "./common/theme.scss";
+@import "./common/reset.scss";
+@import "./common/icon.scss";
+
+body {
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  padding: 20px 20px 60px;
+  margin: 0 auto;
+}
