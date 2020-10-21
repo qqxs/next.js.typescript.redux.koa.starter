@@ -21,6 +21,10 @@
     "next": "^9.5.5",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
     "sass": "^1.27.0",
     "typescript": "^3.8.3"
   },
@@ -32,6 +36,7 @@
     "@types/react": "^16.9.32",
     "@types/react-dom": "^16.9.6",
     "cross-env": "^7.0.2",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "redux-devtools-extension": "^2.13.8"
   }
 }

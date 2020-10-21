@@ -1,0 +1,9 @@
+@import "./common/theme.scss";
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: $primary-color;
+}
