@@ -32,6 +32,7 @@
     "typescript": "^3.8.3"
   },
   "devDependencies": {
+    "@ant-design/icons": "^4.2.2",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@babel/register": "^7.9.0",
