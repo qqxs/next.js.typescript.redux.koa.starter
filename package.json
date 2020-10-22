@@ -2,14 +2,18 @@
   "name": "react.next",
   "version": "0.0.1",
   "description": "next.js typescript redux demo",
+  "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon ./server/index",
+    "dev": "cross-env NODE_ENV=development nodemon ./index",
     "build": "next build",
     "start": "next start",
     "export": "next build && next export",
     "start:prod": "pm2 start ecosystem.config.js --env production",
     "restart": "pm2 restart ecosystem.config.js",
-    "stop": "pm2 stop ecosystem.config.js"
+    "stop": "pm2 stop ecosystem.config.js",
+    "fix": "eslint --fix src/**/*.ts --fix  src/**/*.tsx --fix src/**/*.js --fix  src/**/*.jsx",
+    "lint": "eslint --ext .ts --ext .tsx --ext .js --ext .jsx src/",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,scss,less}\""
   },
   "keywords": [],
   "author": "shineshao <xiaoshaoqq@gmail.com>",
