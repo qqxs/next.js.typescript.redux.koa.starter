@@ -5,5 +5,16 @@
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    color: $primary-color;
+    // color: $primary-color;
+    flex-direction: column;
+
+    .logo {
+        transform: scale(2);
+    }
+
+    .title {
+        font-size: 30px;
+        margin-top: 20px;
+    }
 }
+
