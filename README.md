@@ -11,9 +11,13 @@ npm run dev
 # build production
 npm run build
 
+# build production and export static source
+npm run export
+
 # run production
 npm run start:prod
-
 ```
+
+## 在 nginx 中部署`export`导出
 
 [nextjs](https://nextjs.org/docs/getting-started)
