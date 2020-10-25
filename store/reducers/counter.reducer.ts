@@ -15,7 +15,7 @@ export const initialCounterState: CounterStateType = {
 function counterReducer(
   state: CounterStateType = initialCounterState,
   { type }: ICounterAction
-) {
+): CounterStateType {
   switch (type) {
     // case types.INCREMENT:
     //   return state + 1;

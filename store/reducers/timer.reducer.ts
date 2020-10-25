@@ -1,10 +1,10 @@
 import {
   OmitType,
   ITimerAction,
-  TIMERTICK,
-  TIMERINCREMENT,
-  TIMERDECREMENT,
-  TIMERRESET
+  TIMER_TICK,
+  TIMER_INCREMENT,
+  TIMER_DECREMENT,
+  TIMER_RESET
 } from "../types";
 
 export type TimerStateType = OmitType<ITimerAction>;
@@ -26,23 +26,23 @@ function timerReducer(
   action: ITimerAction
 ) {
   switch (action.type) {
-    case TIMERTICK:
+    case TIMER_TICK:
       return {
         ...state,
         lastUpdate: action.lastUpdate,
         light: !!action.light
       };
-    case TIMERINCREMENT:
+    case TIMER_INCREMENT:
       return {
         ...state,
         count: state.count + 1
       };
-    case TIMERDECREMENT:
+    case TIMER_DECREMENT:
       return {
         ...state,
         count: state.count - 1
       };
-    case TIMERRESET:
+    case TIMER_RESET:
       return {
         ...state,
         count: initialTimerState.count
