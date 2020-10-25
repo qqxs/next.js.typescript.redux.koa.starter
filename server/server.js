@@ -1,6 +1,6 @@
-import Koa from "koa";
-import next from "next";
-import Router from "@koa/router";
+const Koa = require("koa");
+const next = require("next");
+const Router = require("@koa/router");
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== "production";
@@ -14,10 +14,10 @@ app.prepare().then(() => {
   const router = new Router();
 
   // api
-  //   router.use("/api", RouterApi);
+  // router.use("/api", RouterApi);
   console.log("app start");
   // next
-  router.all("*", async (ctx) => {
+  router.all("*", async ctx => {
     await handle(ctx.req, ctx.res);
     ctx.respond = false;
   });

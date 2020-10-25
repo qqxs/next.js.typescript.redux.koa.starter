@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require("path");
 const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
@@ -6,6 +6,6 @@ module.exports = {
   assetPrefix: isProd ? "" : "",
   distDir: ".next",
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  },
+    includePaths: [path.join(__dirname, "styles")]
+  }
 };
