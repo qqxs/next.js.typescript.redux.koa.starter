@@ -7,23 +7,24 @@ export interface IStoreStateType {
 }
 
 /** 移除对象中的`type` key */
-export type OmitType<T> = Omit<T, "type">;
+// export type OmitType<T> = Omit<T, "type">;
 
 // REDUX ACTION TYPES
 // timer action types
+/** timer state interface */
+export interface ITimer {
+  lastUpdate?: string;
+  light?: boolean;
+  count?: number;
+}
 /** */
 export const TIMER_TICK = "TIMER_TICK";
 export const TIMER_INCREMENT = "TIMER_INCREMENT";
 export const TIMER_DECREMENT = "TIMER_DECREMENT";
 export const TIMER_RESET = "TIMER_RESET";
-/** timer action interface */
-export interface ITimerAction extends Action {
-  lastUpdate?: string;
-  light?: boolean;
-  count?: number;
-}
 
 // counter action types
+export type ICounter = number;
 /** counter +1 action type  */
 export const COUNTER_INCREMENT = "COUNTER_INCREMENT";
 /** counter -1 action type */
@@ -58,7 +59,7 @@ export const TODOS_CLEAR = "TODOS_CLEAR"; // 清空
 /** todos toggle complete action type */
 export const TODOS_TOGGLE_COMPLETE = "TODOS_TOGGLE_COMPLETE"; // 更新完成状态
 
-/** todos action interface */
+/** all action interface */
 export interface IStoreAction<T> extends Action {
   payload?: T;
 }

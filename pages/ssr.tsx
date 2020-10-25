@@ -1,9 +1,10 @@
+import { NextPage } from "next";
 import Page from "../components/pages/ssg";
 import { initializeStore } from "../store";
 
-export default function SSR() {
+const SSR: NextPage = () => {
   return <Page />;
-}
+};
 
 // The date returned here will be different for every request that hits the page,
 // that is because the page becomes a serverless function instead of being statically
@@ -23,3 +24,5 @@ export function getServerSideProps() {
 
   return { props: { initialReduxState: reduxStore.getState() } };
 }
+
+export default SSR;

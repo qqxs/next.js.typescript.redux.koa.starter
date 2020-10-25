@@ -1,10 +1,11 @@
+import { IStoreStateType } from "@store/types";
 import { useSelector, shallowEqual } from "react-redux";
 
 const useClock = () => {
   return useSelector(
-    state => ({
-      lastUpdate: state.lastUpdate,
-      light: state.light
+    (state: Require<IStoreStateType>) => ({
+      lastUpdate: state.timer.lastUpdate,
+      light: state.timer.light
     }),
     shallowEqual
   );
@@ -15,7 +16,7 @@ const formatTime = time => {
   return new Date(time).toJSON(); //.slice(11, 19)
 };
 
-const Clock = () => {
+const Clock: React.FC = () => {
   const { lastUpdate, light } = useClock();
   return (
     <div className={light ? "light" : ""}>

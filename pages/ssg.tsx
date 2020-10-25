@@ -1,13 +1,12 @@
+import { NextPage } from "next";
 import Page from "../components/pages/ssg";
-import { useStore } from "../store";
 
-export interface ISSGProps {}
+// export interface ISSGProps {}
 
-export default function SSG(props: ISSGProps) {
+const SSG: NextPage = props => {
   console.log("SSG", props);
-
   return <Page />;
-}
+};
 
 // If you build and start the app, the date returned here will have the same
 // value for all requests, as this method gets executed at build time.
@@ -24,3 +23,5 @@ export function getStaticProps() {
     }
   };
 }
+
+export default SSG;

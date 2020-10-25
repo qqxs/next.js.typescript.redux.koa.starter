@@ -1,16 +1,14 @@
 import {
-  OmitType,
-  ITimerAction,
   TIMER_TICK,
   TIMER_INCREMENT,
   TIMER_DECREMENT,
-  TIMER_RESET
+  TIMER_RESET,
+  ITimer,
+  IStoreAction
 } from "../types";
 
-export type TimerStateType = OmitType<ITimerAction>;
-
 // INITIAL TIMER STATE
-export const initialTimerState: TimerStateType = {
+export const initialTimerState: ITimer = {
   lastUpdate: "",
   light: false,
   count: 0
@@ -18,19 +16,19 @@ export const initialTimerState: TimerStateType = {
 
 /**
  * TIMER REDUCER
- * @param {TimerState} state timer default init value or value
+ * @param {ITimer} state timer default init value or value
  * @param {ITimerAction} action timer action
  */
 function timerReducer(
-  state: TimerStateType = initialTimerState,
-  action: ITimerAction
-) {
+  state: ITimer = initialTimerState,
+  action: IStoreAction<ITimer>
+): ITimer {
   switch (action.type) {
     case TIMER_TICK:
       return {
         ...state,
-        lastUpdate: action.lastUpdate,
-        light: !!action.light
+        lastUpdate: action.payload.lastUpdate,
+        light: !!action.payload.light
       };
     case TIMER_INCREMENT:
       return {

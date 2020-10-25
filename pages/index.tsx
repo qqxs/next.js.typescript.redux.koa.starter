@@ -1,8 +1,10 @@
 import React from "react";
+import { NextPage } from "next";
 import styles from "../styles/pages/index.module.scss";
-interface IProps {}
 
-const Index: React.FC<IProps> = props => {
+// interface IProps { }
+
+const Index: NextPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logo}>

@@ -12,7 +12,7 @@
     "restart": "pm2 restart ecosystem.config.js",
     "stop": "pm2 stop ecosystem.config.js",
     "fix": "eslint --fix client/**/*.ts --fix  client/**/*.tsx --fix client/**/*.js --fix  client/**/*.jsx",
-    "lint": "eslint --ext .ts --ext .tsx --ext .js --ext .jsx client/",
+    "lint": "eslint --ext .ts --ext .tsx --ext .js --ext .jsx .",
     "format": "prettier --write \"client/**/*.{ts,tsx,js,jsx,json,css,scss,less}\""
   },
   "keywords": [

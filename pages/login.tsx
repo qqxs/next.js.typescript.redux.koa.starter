@@ -1,9 +1,11 @@
 import React from "react";
 import { NextPage } from "next";
 import { useSelector } from "react-redux";
+import { IStoreStateType } from "@store/types";
 
 const Login: NextPage = props => {
-  const state = useSelector((state: any) => {
+  console.log(props);
+  const state = useSelector((state: IStoreStateType) => {
     return {
       counter: state.counter
     };

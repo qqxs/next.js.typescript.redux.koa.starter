@@ -3,7 +3,7 @@ import { NextPage } from "next";
 import { useSelector, useDispatch } from "react-redux";
 
 import styles from "@styles/pages/todolist.module.scss";
-import { ITodo } from "@store/types";
+import { IStoreStateType, ITodo } from "@store/types";
 import { todosAddAction } from "@store/actions/todos.action";
 
 const TodoList: NextPage = props => {
@@ -13,7 +13,7 @@ const TodoList: NextPage = props => {
 
   const dispatch = useDispatch();
 
-  const todos: ITodo[] = useSelector((state: any) => {
+  const todos: ITodo[] = useSelector((state: IStoreStateType) => {
     return state.todos;
   });
 

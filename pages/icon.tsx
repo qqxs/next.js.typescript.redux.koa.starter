@@ -1,4 +1,4 @@
-import React from "react";
+import { NextPage } from "next";
 import {
   AndroidOutlined,
   AppleOutlined,
@@ -25,9 +25,7 @@ import {
 } from "@ant-design/icons";
 import styles from "../styles/pages/icon.module.scss";
 
-interface IProps {}
-
-const Icon: React.FC<IProps> = props => {
+const Icon: NextPage = () => {
   return (
     <div className={styles.container}>
       <ul className={styles.iconLlist}>

@@ -1,11 +1,7 @@
-import { OmitType, ICounterAction } from "../types";
-
-export type CounterStateType = OmitType<ICounterAction>;
+import { ICounter, IStoreAction } from "../types";
 
 // INITIAL TIMER STATE
-export const initialCounterState: CounterStateType = {
-  counter: 0
-};
+export const initialCounterState: ICounter = 0;
 
 /**
  * COUNTER REDUCER
@@ -13,9 +9,9 @@ export const initialCounterState: CounterStateType = {
  * @param {Action} param Action
  */
 function counterReducer(
-  state: CounterStateType = initialCounterState,
-  { type }: ICounterAction
-): CounterStateType {
+  state: ICounter = initialCounterState,
+  { type }: IStoreAction<ICounter>
+): ICounter {
   switch (type) {
     // case types.INCREMENT:
     //   return state + 1;
