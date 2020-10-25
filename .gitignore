@@ -5,6 +5,7 @@ node_modules/
 logs/
 
 dist
+out
 
 .DS_Store
 
