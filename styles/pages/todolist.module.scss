@@ -1,0 +1,30 @@
+.container {
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.list {
+  padding: 20px 0px;
+}
+
+.item {
+  height: 45px;
+  background-color: #e6f7ff;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 2px;
+
+  &:hover {
+    background-color: lightblue;
+  }
+}
+
+.status {
+  color: #0099e5;
+  cursor: pointer;
+}

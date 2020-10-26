@@ -32,7 +32,7 @@ function todosReducer(
       });
     case TODOS_TOGGLE_COMPLETE:
       return state.map((todo: ITodo) => {
-        todo.completed = !todo.completed;
+        if (todo.id == payload.id) todo.completed = !todo.completed;
         return todo;
       });
     case TODOS_CLEAR:
