@@ -19,7 +19,6 @@ function todosReducer(
   state: ITodo[] = initialTodoList,
   { type, payload }: IStoreAction<ITodo>
 ): ITodo[] {
-  console.log("IStoreAction", type, payload);
   switch (type) {
     case TODOS_CONCAT:
       return [].concat(state, payload);
