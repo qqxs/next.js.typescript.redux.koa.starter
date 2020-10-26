@@ -4,7 +4,7 @@ import Clock from "../clock";
 import Counter from "../counter";
 import Nav from "../nav";
 
-export default function Page() {
+const Page: React.FC = () => {
   const dispatch = useDispatch();
 
   // Tick the time every second
@@ -23,4 +23,6 @@ export default function Page() {
       <Counter />
     </>
   );
-}
+};
+
+export default Page;

@@ -1,16 +1,16 @@
 import Link from "next/link";
 
-const Nav = () => {
+const Nav: React.FC = () => {
   return (
     <nav>
       <Link href="/">
-        <a>Index</a>
+        <a href="/">Index</a>
       </Link>
       <Link href="/ssg">
-        <a>SSG</a>
+        <a href="/ssg">SSG</a>
       </Link>
       <Link href="/ssr">
-        <a>SSR</a>
+        <a href="/ssr">SSR</a>
       </Link>
       <style jsx>
         {`

@@ -5,7 +5,7 @@ import "../styles/app.scss";
 // This default export is required in a new `pages/_app.js` file.
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export default function AppCom({ Component, pageProps }: any) {
+export default function AppCom({ Component, pageProps }): JSX.Element {
   const store = useStore(pageProps.initialReduxState);
 
   return (

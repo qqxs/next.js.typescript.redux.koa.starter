@@ -1,6 +1,11 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
+  "settings": {
+    "react": {
+      "version": "16.14" // React version. "detect" automatically picks the version you have installed.
+    }
+  },
   "parserOptions": {
     "ecmaFeatures": { "jsx": true },
     "sourceType": "module"

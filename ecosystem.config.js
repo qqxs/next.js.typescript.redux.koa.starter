@@ -17,7 +17,7 @@ module.exports = {
         "components",
         "public",
         "scr",
-        ".next",
+        ".next"
       ],
       error_file: "./logs/app-err.log", // 错误日志文件
       out_file: "./logs/app-out.log", // 正常日志文件
@@ -25,16 +25,16 @@ module.exports = {
       max_memory_restart: "1G",
       env_pro: {
         NODE_ENV: "production",
-        REMOTE_ADDR: "",
+        REMOTE_ADDR: ""
       },
       env_dev: {
         NODE_ENV: "development",
-        REMOTE_ADDR: "",
+        REMOTE_ADDR: ""
       },
       env_test: {
         NODE_ENV: "test",
-        REMOTE_ADDR: "",
-      },
-    },
-  ],
+        REMOTE_ADDR: ""
+      }
+    }
+  ]
 };

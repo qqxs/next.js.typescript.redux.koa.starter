@@ -1,7 +1,8 @@
 import { useEffect, useRef, MutableRefObject } from "react";
 
 // https://overreacted.io/making-setinterval-declarative-with-react-hooks/
-const useInterval = (callback, delay) => {
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+const useInterval = (callback: unknown, delay: number | null) => {
   const savedCallback: MutableRefObject<any> = useRef();
 
   useEffect(() => {

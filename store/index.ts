@@ -15,6 +15,7 @@ function initStore(initialState) {
   );
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const initializeStore = (preloadedState?: any) => {
   let _store = store ?? initStore(preloadedState);
 
@@ -37,6 +38,7 @@ export const initializeStore = (preloadedState?: any) => {
   return _store;
 };
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export function useStore(initialState) {
   const store = useMemo(() => initializeStore(initialState), [initialState]);
   return store;
