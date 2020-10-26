@@ -1,22 +1,31 @@
 import { useMemo } from "react";
 import { createStore, applyMiddleware } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
 import thunkMiddleware from "redux-thunk";
-import logggerMiddleware from "redux-logger";
 import reducers from "./reducers";
 
 let store;
 
+const bindMiddleware = middleware => {
+  if (process.env.NODE_ENV !== "production") {
+    const { composeWithDevTools } = require("redux-devtools-extension");
+    // 开发模式打印redux信息
+    const { logger } = require("redux-logger");
+    middleware.push(logger);
+    return composeWithDevTools(applyMiddleware(...middleware));
+  }
+
+  middleware.push(thunkMiddleware);
+
+  return applyMiddleware(...middleware);
+};
+
 function initStore(initialState) {
-  return createStore(
-    reducers,
-    initialState,
-    composeWithDevTools(applyMiddleware(thunkMiddleware, logggerMiddleware))
-  );
+  const middleware = bindMiddleware([]);
+  return createStore(reducers, initialState, middleware);
 }
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export const initializeStore = (preloadedState?: any) => {
+export const initializeStore = (preloadedState?: unknown[]) => {
   let _store = store ?? initStore(preloadedState);
 
   // After navigating to a page with an initial Redux state, merge that state
@@ -26,6 +35,7 @@ export const initializeStore = (preloadedState?: any) => {
       ...store.getState(),
       ...preloadedState
     });
+
     // Reset the current store
     store = undefined;
   }
