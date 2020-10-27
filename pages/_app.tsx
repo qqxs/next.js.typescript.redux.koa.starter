@@ -25,7 +25,7 @@ const AppCom: NextComponentType<
 
   // console.log("Component", Component);
   // console.log("pageProps", pageProps);
-  console.log("appProps", appProps);
+  // console.log("appProps", appProps);
 
   return (
     <Provider store={store}>
@@ -43,14 +43,14 @@ AppCom.getInitialProps = async (context: any) => {
 
   // console.log("getServerSideProps", store, req, pathname, query, res);
 
-  dispatch(
-    todosAddAction({
-      id: 0,
-      completed: false,
-      text: "this is server",
-      timer: new Date().getTime() + ""
-    })
-  );
+  // dispatch(
+  //   todosAddAction({
+  //     id: 0,
+  //     completed: false,
+  //     text: "this is server",
+  //     timer: new Date().getTime() + ""
+  //   })
+  // );
 
   return {
     appProps: {
