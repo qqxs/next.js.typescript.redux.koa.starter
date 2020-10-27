@@ -34,11 +34,12 @@ const AppCom: NextComponentType<
   );
 };
 
-AppCom.getInitialProps = async (context: any) => {
+AppCom.getInitialProps = async context => {
   const reduxStore = initializeStore();
 
   // const { store, req, pathname, query, res } = context.ctx;
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { dispatch } = reduxStore;
 
   // console.log("getServerSideProps", store, req, pathname, query, res);
