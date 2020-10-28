@@ -21,3 +21,7 @@ npm run start:prod
 ## 在 nginx 中部署`export`导出
 
 [nextjs](https://nextjs.org/docs/getting-started)
+
+## next.js@10
+
+https://www.oschina.net/news/119510/next-js-10-0-0-released
