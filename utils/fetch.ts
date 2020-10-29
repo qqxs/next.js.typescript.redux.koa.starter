@@ -1,6 +1,8 @@
 import fetch from "isomorphic-fetch";
 
-const BASE_URL = "http://localhost:3002/api/v1";
+// ⚠️注意：所有的body必须是json对象
+
+const BASE_URL = "http://localhost:3000";
 
 function initRequest(url: string, init?: RequestInit): [string, RequestInit] {
   let headers = {};
@@ -11,13 +13,13 @@ function initRequest(url: string, init?: RequestInit): [string, RequestInit] {
     headers = Object.assign(
       {
         Authorization: `Bearer `, // 带上token的地方
-        "Content-Type": "application/json"
+        "Content-Type": "application/json;charset=utf-8"
       },
       headers
     );
   }
 
-  return [url, { ...init, headers }];
+  return [url, { credentials: "include", ...init, headers }];
 }
 
 /**
@@ -39,7 +41,7 @@ export async function fetchGet(
 
 export async function fetchPost(
   url: string,
-  body: BodyInit,
+  body?: BodyInit,
   init?: Omit<RequestInit, "body">
 ): Promise<Response> {
   [url, init] = initRequest(url, {
