@@ -3,7 +3,7 @@ import { NextComponentType } from "next";
 import { AppContext, AppProps } from "next/app";
 import { useStore, initializeStore } from "../store";
 import "../styles/app.scss";
-import { todosAddAction } from "@store/actions/todos.action";
+// import { todosAddAction } from "@store/actions/todos.action";
 // This default export is required in a new `pages/_app.js` file.
 
 export interface ModifiedAppInitialProps<A = { [key in string]: string }> {
@@ -34,7 +34,7 @@ const AppCom: NextComponentType<
   );
 };
 
-AppCom.getInitialProps = async context => {
+AppCom.getInitialProps = async (context: AppContext) => {
   const reduxStore = initializeStore();
 
   // const { store, req, pathname, query, res } = context.ctx;

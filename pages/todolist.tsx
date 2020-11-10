@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { NextPage, GetStaticProps } from "next";
+import { NextPage, GetServerSideProps, GetServerSidePropsContext } from "next";
 import { useSelector, useDispatch } from "react-redux";
 import styles from "@styles/pages/todolist.module.scss";
 import { IStoreStateType, ITodo } from "@store/types";
@@ -52,7 +52,9 @@ const TodoList: NextPage = props => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async context => {
+export const getServerSideProps: GetServerSideProps = async (
+  context: GetServerSidePropsContext
+) => {
   console.log(context);
   const res = await fetch("https://api.github.com/users/rich-harris");
   const posts = await res.json();
