@@ -15,6 +15,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
+      "*": ["*"],
       "@styles/*": ["styles/*"],
       "@components/*": ["components/*"],
       "@utils/*": ["utils/*"],
@@ -22,8 +23,7 @@
       "@assets/*": ["assets/*"],
       "@hooks/*": ["hooks/*"],
       "@api/*": ["api/*"]
-    },
-    "typeRoots": [".", "./store"]
+    }
   },
   "exclude": ["node_modules", ".next", ".github"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
