@@ -1,15 +1,13 @@
 {
-    "htmlWhitespaceSensitivity": "ignore",
-    "trailingComma": "none",
-    "bracketSpacing": true,
-    "jsxBracketSameLine": false,
-    "arrowParens": "avoid",
-    "endOfLine": "auto",
-    "tabWidth": 2,
-    "overrides": [
-      {
-        "files": ".prettierrc",
-        "options": { "parser": "json" }
-      }
-    ]
-  }
+  "htmlWhitespaceSensitivity": "ignore",
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "arrowParens": "avoid",
+  "endOfLine": "auto",
+  "tabWidth": 2,
+  "overrides": [{
+    "files": ".prettierrc",
+    "options": { "parser": "json" }
+  }]
+}
