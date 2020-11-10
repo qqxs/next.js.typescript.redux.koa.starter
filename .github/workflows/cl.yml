@@ -1,50 +1,30 @@
-name: Next React Koa Deploy Demo
-on:
-    push:
-        branches:
-            - master
-jobs:
-    build-and-deploy:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
-              with:
-                  persist-credentials: false
-            - uses: actions/setup-node@v1
-              with:
-                  node-version: "10.x"
-            - run: node -v
-            - run: npm install pm2 -g
-            - name: Install and Build run pm2  node@10.x
-              run: |
-                  npm install
-                  npm run build
-                  npm run start:prod
-                  npm run restart
-                  npm run stop
+name: Next.js Typescript Redux Koa starter
 
-            - uses: actions/setup-node@v1
-              with:
-                  node-version: "12.x"
-            - run: node -v
-            - run: npm install pm2 -g
-            - name: Install and Build run pm2  node@12.x
-              run: |
-                  npm install
-                  npm run build
-                  npm run start:prod
-                  npm run restart
-                  npm run stop
-            - uses: actions/setup-node@v1
-              with:
-                  node-version: "13.x"
-            - run: node -v
-            - run: npm install pm2 -g
-            - name: Install and Build run pm2  node@13.x
-              run: |
-                  npm install
-                  npm run build
-                  npm run start:prod
-                  npm run restart
-                  npm run stop
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install pm2 -g
+      - run: npm install
+      - run: npm run build
+      - run: npm run start:prod
+      - run: curl http://localhost:3000
+      - run: npm run restart
+      - run: npm run stop
+        env:
+          CI: true
