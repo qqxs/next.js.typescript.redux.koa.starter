@@ -3,7 +3,7 @@ import { useSelector, shallowEqual } from "react-redux";
 
 const useClock = () => {
   return useSelector(
-    (state: Require<IStoreStateType>) => ({
+    (state: Required<IStoreStateType>) => ({
       lastUpdate: state.timer.lastUpdate,
       light: state.timer.light
     }),
@@ -21,6 +21,7 @@ const Clock: React.FC = () => {
   return (
     <div className={light ? "light" : ""}>
       {formatTime(lastUpdate)}
+      {/* 不推荐 */}
       <style jsx>{`
         div {
           padding: 15px;
