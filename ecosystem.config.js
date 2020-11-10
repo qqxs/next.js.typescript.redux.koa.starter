@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: "react.next",
-      script: "server/index.js",
+      script: "index.js",
       // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
       args: "one two",
       instances: 1,
