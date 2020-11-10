@@ -2,7 +2,7 @@ import { Action } from "redux";
 
 export interface IStoreStateType {
   counter: number;
-  timer: number;
+  timer: ITimer;
   todos: ITodo[];
 }
 
