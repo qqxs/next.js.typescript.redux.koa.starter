@@ -18,7 +18,8 @@
     "plugin:jsx-a11y/recommended",
     // Prettier plugin and recommended rules
     "prettier/@typescript-eslint",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "prettier"
   ],
   "rules": {
     // Include .prettierrc.js rules
