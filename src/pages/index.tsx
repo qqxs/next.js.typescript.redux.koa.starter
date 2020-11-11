@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
 import { NextPage } from "next";
-import styles from "../styles/pages/index.module.scss";
+import styles from "./index.module.scss";
 import { fetchGet, fetchPost } from "@utils/fetch";
 
 const Index: NextPage = () => {
   useEffect(() => {
     fetchGet("/api/user/1").then(res => {
-      console.log(res);
+      // console.log(res);
     });
 
     fetchPost("/api/user/1").then(res => {
-      console.log(res);
+      // console.log(res);
     });
   }, []);
 

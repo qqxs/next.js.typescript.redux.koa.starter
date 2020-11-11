@@ -14,7 +14,7 @@ export function getServerSideProps(context: GetServerSidePropsContext) {
 
   const { dispatch } = reduxStore;
 
-  console.log("getServerSideProps", reduxStore);
+  // console.log("getServerSideProps", reduxStore);
 
   dispatch({
     type: "TICK",

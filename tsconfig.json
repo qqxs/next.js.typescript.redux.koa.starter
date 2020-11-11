@@ -17,12 +17,11 @@
     "paths": {
       "*": ["*"],
       "@styles/*": ["styles/*"],
-      "@components/*": ["components/*"],
-      "@utils/*": ["utils/*"],
-      "@store/*": ["store/*"],
+      "@components/*": ["src/components/*"],
+      "@utils/*": ["src/utils/*"],
+      "@store/*": ["src/store/*"],
       "@assets/*": ["assets/*"],
-      "@hooks/*": ["hooks/*"],
-      "@api/*": ["api/*"]
+      "@hooks/*": ["src/hooks/*"]
     }
   },
   "exclude": ["node_modules", ".next", ".github"],
