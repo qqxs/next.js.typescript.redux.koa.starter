@@ -3,10 +3,9 @@ import { NextPage, GetServerSideProps, GetServerSidePropsContext } from "next";
 import { useSelector, useDispatch } from "react-redux";
 import styles from "./todolist.module.scss";
 import { IStoreStateType, ITodo } from "@store/types";
-
 import { todosToggleComplateAction } from "@store/actions/todos.action";
-
 import Input from "@components/pages/todolist/Input";
+import Layout from "@components/Layout";
 
 const TodoList: NextPage = props => {
   // console.log(props);
@@ -27,28 +26,30 @@ const TodoList: NextPage = props => {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <header>
-        <Input />
-      </header>
-      <main>
-        <ul className={styles.list}>
-          {todos.map((todo: ITodo) => (
-            <li className={styles.item} key={todo.id}>
-              {todo.text}
-              <span
-                className={styles.status}
-                onClick={() => {
-                  handleToggleStatus(todo.id);
-                }}
-              >
-                {todo.completed ? "完成" : "未完成"}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </main>
-    </div>
+    <Layout>
+      <div className={styles.container}>
+        <header>
+          <Input />
+        </header>
+        <main>
+          <ul className={styles.list}>
+            {todos.map((todo: ITodo) => (
+              <li className={styles.item} key={todo.id}>
+                {todo.text}
+                <span
+                  className={styles.status}
+                  onClick={() => {
+                    handleToggleStatus(todo.id);
+                  }}
+                >
+                  {todo.completed ? "完成" : "未完成"}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </main>
+      </div>
+    </Layout>
   );
 };
 

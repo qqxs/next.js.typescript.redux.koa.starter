@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import Link from "next/link";
 import { NextPage } from "next";
 import { IStoreStateType } from "@store/types";
+import Layout from "@components/Layout";
 
 const codeStyle = {
   background: "#ebebeb",
@@ -15,14 +16,14 @@ const ShowReduxState: NextPage = () => {
   const state = useSelector((state: IStoreStateType) => state);
 
   return (
-    <>
+    <Layout>
       <pre style={codeStyle}>
         <code>{JSON.stringify(state, null, 4)}</code>
       </pre>
       <Link href="/">
         <a href="/">Go Back Home</a>
       </Link>
-    </>
+    </Layout>
   );
 };
 

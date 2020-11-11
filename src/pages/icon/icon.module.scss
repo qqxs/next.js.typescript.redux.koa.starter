@@ -1,7 +1,8 @@
 @import "../../styles/common/theme.scss";
 .container {
   display: flex;
-  min-height: 100vh;
+  margin: 0 auto;
+  width: 1200px;
   .iconLlist {
     display: flex;
     padding: 20px;

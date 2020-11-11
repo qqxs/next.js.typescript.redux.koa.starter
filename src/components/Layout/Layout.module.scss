@@ -1,0 +1,37 @@
+@import "../../styles/common/theme.scss";
+.header {
+  height: $header-height;
+  background-color: #333;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  .listItem {
+    padding: 10px;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.main {
+  flex: 1;
+  display: flex;
+}
+
+.footer {
+  height: $footer-height;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  a {
+    color: #fff;
+    margin: 0 10px;
+  }
+}

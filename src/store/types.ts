@@ -59,6 +59,17 @@ export const TODOS_CLEAR = "TODOS_CLEAR"; // 清空
 /** todos toggle complete action type */
 export const TODOS_TOGGLE_COMPLETE = "TODOS_TOGGLE_COMPLETE"; // 更新完成状态
 
+export interface IUser {
+  id: number;
+  name: string;
+  email: string;
+}
+
+/** user add action type */
+export const USER_ADD = "USER_ADD";
+/** user delete user action type */
+export const USER_DELETE = "USER_DELETE"; // 删除
+
 /** all action interface */
 export interface IStoreAction<T> extends Action {
   payload?: T;
