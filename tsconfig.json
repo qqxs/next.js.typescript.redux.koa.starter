@@ -14,6 +14,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": ".",
+    "typeRoots": ["./src/@types/"],
     "paths": {
       "*": ["*"],
       "@styles/*": ["styles/*"],
