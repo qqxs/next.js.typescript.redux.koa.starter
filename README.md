@@ -1,5 +1,7 @@
 # next.react.ts.koa.demo
 
+![build](https://github.com/qqxs/next.js.typescript.redux.koa.starter/workflows/Next.js%2Typescript%2Redux%2Koa%2starter/badge.svg)
+
 ## Use
 
 ```sh
