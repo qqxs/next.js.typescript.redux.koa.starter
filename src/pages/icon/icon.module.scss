@@ -1,15 +1,12 @@
-@import "./common/theme.scss";
-
+@import "../../styles/common/theme.scss";
 .container {
   display: flex;
   min-height: 100vh;
-
   .iconLlist {
     display: flex;
     padding: 20px;
     flex-wrap: wrap;
     justify-content: space-around;
-
     .iconItem {
       font-size: 50px;
       width: 100px;
@@ -18,7 +15,6 @@
       justify-content: center;
       align-items: center;
       cursor: pointer;
-
       &:hover {
         background-color: rgba(0, 0, 0, 0.1);
       }

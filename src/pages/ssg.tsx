@@ -4,7 +4,7 @@ import Page from "../components/pages/ssg";
 // export interface ISSGProps {}
 
 const SSG: NextPage = props => {
-  console.log("SSG", props);
+  // console.log("SSG", props);
   return <Page />;
 };
 

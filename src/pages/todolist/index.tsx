@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { NextPage, GetServerSideProps, GetServerSidePropsContext } from "next";
 import { useSelector, useDispatch } from "react-redux";
-import styles from "@styles/pages/todolist.module.scss";
+import styles from "./todolist.module.scss";
 import { IStoreStateType, ITodo } from "@store/types";
 
 import { todosToggleComplateAction } from "@store/actions/todos.action";
@@ -9,7 +9,7 @@ import { todosToggleComplateAction } from "@store/actions/todos.action";
 import Input from "@components/pages/todolist/Input";
 
 const TodoList: NextPage = props => {
-  console.log(props);
+  // console.log(props);
 
   const todos: ITodo[] = useSelector((state: IStoreStateType) => {
     return state.todos;
@@ -55,7 +55,7 @@ const TodoList: NextPage = props => {
 export const getServerSideProps: GetServerSideProps = async (
   context: GetServerSidePropsContext
 ) => {
-  console.log(context);
+  // console.log(context);
   const res = await fetch("https://api.github.com/users/rich-harris");
   const posts = await res.json();
 

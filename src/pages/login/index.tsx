@@ -4,10 +4,10 @@ import { useSelector } from "react-redux";
 import { IStoreStateType } from "@store/types";
 // import { fetchGet } from "@utils/fetch";
 
-import styles from "@styles/pages/login.module.scss";
+import styles from "./login.module.scss";
 
 const Login: NextPage = props => {
-  console.log(props);
+  // console.log(props);
 
   // useEffect(() => {
   //   fetchGet("/album").then(res => {
@@ -28,7 +28,7 @@ const Login: NextPage = props => {
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   // const data = await fetchGet("/album");
 
-  console.log(context);
+  // console.log(context);
 
   return {
     props: {

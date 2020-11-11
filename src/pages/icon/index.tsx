@@ -23,7 +23,7 @@ import {
   GooglePlusOutlined,
   FacebookOutlined
 } from "@ant-design/icons";
-import styles from "../styles/pages/icon.module.scss";
+import styles from "./icon.module.scss";
 
 const Icon: NextPage = () => {
   return (

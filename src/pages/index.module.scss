@@ -1,5 +1,4 @@
-@import "./common/theme.scss";
-
+@import "../styles/common/theme.scss";
 .container {
   display: flex;
   min-height: 100vh;
@@ -7,11 +6,9 @@
   align-items: center;
   // color: $primary-color;
   flex-direction: column;
-
   .logo {
     transform: scale(2);
   }
-
   .title {
     font-size: 30px;
     margin-top: 20px;
