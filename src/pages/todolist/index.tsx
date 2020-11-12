@@ -20,7 +20,7 @@ const TodoList: NextPage = props => {
   };
 
   useEffect(() => {
-    fetch("https://api.github.com/users/rich-harris")
+    fetch("https://api.github.com/users/freeshineit")
       .then(res => res.json())
       .then(res => console.log(res));
   }, []);

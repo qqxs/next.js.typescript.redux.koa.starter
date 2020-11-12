@@ -1,5 +1,7 @@
 @import "./common/theme.scss";
 .container {
   display: flex;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }

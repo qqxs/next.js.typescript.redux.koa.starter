@@ -5,6 +5,7 @@
   padding: 0 100px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .list {
@@ -16,6 +17,14 @@
     color: #fff;
     text-decoration: none;
   }
+}
+
+.user {
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .main {

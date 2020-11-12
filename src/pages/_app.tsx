@@ -2,6 +2,7 @@ import { Provider } from "react-redux";
 import { NextComponentType } from "next";
 import { AppContext, AppProps } from "next/app";
 import { useStore, initializeStore } from "../store";
+import "../styles/bootstrap.min.css";
 import "../styles/app.scss";
 // import { todosAddAction } from "@store/actions/todos.action";
 // This default export is required in a new `pages/_app.js` file.

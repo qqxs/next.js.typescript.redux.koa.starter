@@ -85,20 +85,23 @@ const Layout: React.FC<ILayoutProps> = ({
         ></meta>
       </Head>
       <header className={headerClassNames}>
-        <Link href="/">
-          <a style={{ transform: "scale(.6)" }}>
-            <Logo fill="#FFF" />
-          </a>
-        </Link>
-        <nav>
-          <ul className={styles.list}>
-            {navList.map((nav: INavItem) => (
-              <li key={nav.name} className={styles.listItem}>
-                <Link href={nav.href}>{nav.name}</Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div style={{ display: "flex", alignItems: "center", height: 50 }}>
+          <Link href="/">
+            <a style={{ transform: "scale(.6)" }}>
+              <Logo fill="#FFF" />
+            </a>
+          </Link>
+          <nav>
+            <ul className={styles.list}>
+              {navList.map((nav: INavItem) => (
+                <li key={nav.name} className={styles.listItem}>
+                  <Link href={nav.href}>{nav.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+        <div className={styles.user}></div>
       </header>
       <main className={classNames}>{children}</main>
       <footer className={footerClassNames}>
