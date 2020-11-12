@@ -7,5 +7,8 @@ module.exports = {
   distDir: ".next",
   sassOptions: {
     includePaths: [path.join(__dirname, "src/styles")]
+  },
+  api: {
+    bodyParser: false
   }
 };
